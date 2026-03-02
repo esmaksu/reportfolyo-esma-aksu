@@ -1,2 +1,2 @@
 # web-portfolio-template
-web projesi dersinde kullanacağınız şablonu oluşturuyorum
+Bu site Esma Aksu tarafından yapılmıştır.
