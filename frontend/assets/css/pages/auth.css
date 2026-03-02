@@ -1,0 +1,82 @@
+/* Authentication page styles */
+
+body.auth-page {
+  background: linear-gradient(135deg, #f0f0f8, #fff);
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideDown 0.6s ease forwards;
+}
+
+@keyframes slideDown {
+  to { transform: translateY(0); opacity:1; }
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(208,0,0,0.4);
+}
+
+.input-group .input-group-text {
+  background: #f9f9f9;
+  border-right: none;
+}
+.input-group .form-control {
+  border-left: none;
+}
+
+.auth-container .btn {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.auth-container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* hide unnecessary nav items on auth pages */
+body.auth-page .navbar .form-control,
+body.auth-page .cart-count {
+  display: none !important;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* role selection buttons */
+.role-select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.role-select button {
+  flex: 1;
+  margin: 0 .25rem;
+  padding: .75rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.role-select button:not(.active):hover {
+  background: #f5f5f5;
+}
+.role-select button.active {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
